@@ -16,5 +16,5 @@ Before any work on this project, agents must read:
 - **ROADMAP.md** contains strategic direction and longer-term features
 - Always read both at session start - they may have been manually edited
 
-### Current Version: 0.0.3
-All files are synchronized to version 0.0.3 as of the pending commit.
+### Current Version: 0.0.4
+All files are synchronized to version 0.0.4 as of the pending commit.

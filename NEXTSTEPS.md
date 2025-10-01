@@ -9,4 +9,5 @@ This document contains only immediately actionable tasks completable within one 
 - [ ] Split app.js into server-management.js and ui.js modules
 - [ ] Create API endpoint for historical data retrieval
 - [ ] Add simple line chart component for CPU history
-- [ ] Create project-level AGENTS.md file with META-AGENTS.md reference
+- [ ] Start working on a boilerplate for future projects (on this stack)
+- [ ] Find a smart way for single-source-of-truth version number management (npm scripts/tools)

@@ -4,7 +4,7 @@ A web-based dashboard for managing local development servers with real-time reso
 
 ## Version
 
-Version: 0.0.3
+Version: 0.0.4
 
 ## Features
 
