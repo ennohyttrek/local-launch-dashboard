@@ -1,0 +1,81 @@
+/*---------------------
+COLOR TOKENS
+----------------------*/
+
+/**-----
+Base Hues
+-----**/
+
+:root {
+  --color-base-cool: 199;
+  --color-base-primary: var(--color-base-cool);
+  --color-base-success: 142;
+  --color-base-warning: 38;
+  --color-base-danger: 0;
+}
+
+/**-----
+System Tokens
+-----**/
+
+:root {
+  /* Cool Grey Scale */
+  --color-cool-grey-100: hsl(var(--color-base-cool), 3%, 97%);
+  --color-cool-grey-200: hsl(var(--color-base-cool), 8%, 89%);
+  --color-cool-grey-300: hsl(var(--color-base-cool), 13%, 76%);
+  --color-cool-grey-400: hsl(var(--color-base-cool), 21%, 55%);
+  --color-cool-grey-500: hsl(var(--color-base-cool), 21%, 34%);
+  --color-cool-grey-600: hsl(var(--color-base-cool), 34%, 21%);
+  --color-cool-grey-700: hsl(var(--color-base-cool), 55%, 13%);
+
+  /* Primary Colors */
+  --color-primary-300: hsl(var(--color-base-primary), 31%, 65%);
+  --color-primary-400: hsl(var(--color-base-primary), 21%, 55%);
+  --color-primary-500: hsl(var(--color-base-primary), 31%, 45%);
+
+  /* Status Colors */
+  --color-success-400: hsl(var(--color-base-success), 45%, 45%);
+  --color-success-500: hsl(var(--color-base-success), 55%, 35%);
+  --color-warning-400: hsl(var(--color-base-warning), 85%, 55%);
+  --color-warning-500: hsl(var(--color-base-warning), 90%, 45%);
+  --color-danger-400: hsl(var(--color-base-danger), 75%, 55%);
+  --color-danger-500: hsl(var(--color-base-danger), 85%, 45%);
+}
+
+/**-----
+Semantic Tokens
+-----**/
+
+:root {
+  /* Backgrounds */
+  --color-background-primary: white;
+  --color-background-secondary: var(--color-cool-grey-100);
+  --color-background-tertiary: var(--color-cool-grey-200);
+  
+  /* Text */
+  --color-text-primary: var(--color-cool-grey-700);
+  --color-text-secondary: var(--color-cool-grey-500);
+  --color-text-tertiary: var(--color-cool-grey-400);
+  
+  /* Borders */
+  --color-border-primary: var(--color-cool-grey-300);
+  --color-border-secondary: var(--color-cool-grey-200);
+  
+  /* Interactive */
+  --color-interactive-primary: var(--color-primary-400);
+  --color-interactive-hover: var(--color-primary-500);
+  
+  /* Status */
+  --color-status-running: var(--color-success-400);
+  --color-status-stopped: var(--color-cool-grey-400);
+  --color-status-error: var(--color-danger-400);
+}
+
+/**-----
+Component-Specific Colors
+-----**/
+
+body {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Launch Dashboard</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/color.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <div>
+          <h1 class="header-title">Local Launch Dashboard</h1>
+          <p class="header-subtitle">Manage your local development servers</p>
+        </div>
+        <button id="btnAddServer" class="btn btn-primary">+ Add Server</button>
+      </div>
+    </header>
+
+    <!-- System Metrics Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">System Resources</h2>
+        <button id="btnRefreshSystem" class="btn btn-secondary">Refresh</button>
+      </div>
+      <div class="metrics-grid" id="systemMetrics">
+        <div class="metric-item">
+          <span class="metric-label">CPU Usage</span>
+          <span class="metric-value" id="systemCpu">-</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Memory Used</span>
+          <span class="metric-value" id="systemMemory">-</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">CPU Cores</span>
+          <span class="metric-value" id="systemCores">-</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Free Memory</span>
+          <span class="metric-value" id="systemMemoryFree">-</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servers Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Servers</h2>
+        <span id="serversCount" class="count-badge">0 servers</span>
+      </div>
+      <div id="serversGrid" class="cards-grid">
+        <!-- Server cards will be injected here -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Add/Edit Server Modal -->
+  <dialog id="serverModal" style="border: none; border-radius: 8px; padding: 0; max-width: 500px; width: 90%;">
+    <div class="section" style="margin: 0;">
+      <div class="section-header">
+        <h2 class="section-title" id="modalTitle">Add Server</h2>
+        <button id="btnCloseModal" class="btn btn-secondary" style="padding: 0.25rem 0.75rem;">✕</button>
+      </div>
+      <form id="serverForm">
+        <div class="form-group">
+          <label class="form-label" for="serverName">Server Name *</label>
+          <input type="text" id="serverName" class="form-input" required placeholder="My Development Server">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serverDescription">Description</label>
+          <textarea id="serverDescription" class="form-textarea" placeholder="Optional description"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serverCommand">Command *</label>
+          <input type="text" id="serverCommand" class="form-input" required placeholder="npm run dev">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serverCwd">Working Directory *</label>
+          <input type="text" id="serverCwd" class="form-input" required placeholder="/path/to/project">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serverPort">Port (Optional)</label>
+          <input type="number" id="serverPort" class="form-input" placeholder="3000">
+        </div>
+        <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+          <button type="button" id="btnCancelModal" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Server</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

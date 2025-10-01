@@ -1,0 +1,24 @@
+{
+  "servers": [
+    {
+      "id": "server-hugo-writing",
+      "name": "Hugo Writing Site",
+      "description": "Personal writing blog",
+      "command": "hugo server --port 1314",
+      "cwd": "/Library/WebServer/Documents/00-local-sites/hugo-site-ehy-writing",
+      "port": 1314,
+      "autoStart": false,
+      "createdAt": "2025-01-10T19:30:00.000Z"
+    },
+    {
+      "id": "server-digital-micro-products",
+      "name": "Digital Micro Products",
+      "description": "Product ideas dashboard",
+      "command": "npm run dev",
+      "cwd": "/Library/WebServer/Documents/09-projects-ehy/digital-micro-products",
+      "port": 3001,
+      "autoStart": false,
+      "createdAt": "2025-01-10T19:30:00.000Z"
+    }
+  ]
+}
